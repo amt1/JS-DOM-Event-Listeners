@@ -1,0 +1,19 @@
+{
+  "name": "js-dom-homework",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha specs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amt1/JS-DOM-Event-Listeners.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/amt1/JS-DOM-Event-Listeners/issues"
+  },
+  "homepage": "https://github.com/amt1/JS-DOM-Event-Listeners#readme"
+}
