@@ -1,0 +1,12 @@
+created homework directory
+git init in homework directory
+created git repository on github
+git remote add origin https://github.com/amt1/JS-DOM-Event-Listeners.git
+(in homework directory)
+npm init in homework directory
+created directories for models, specs and css
+created index.html, styles.css, list_app.js and list_app_spec.js
+greated .gitignore file with node_modules on line 1
+npm install in homework directory to create package-lock.json file
+git add, commit
+git push -u origin master
