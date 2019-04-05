@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <script src="models/list-app.js"></script>
+    <link rel="stylesheet" type="text/css" media="screen" href="css/styles.css" />
+
+    <title>Upcoming Events</title>
+  </head>
+  <body>
+    <div id="hero">
+    <h1>Upcoming Events</h1>
+    </div>
+    <main>
+
+      <div id="display-events">
+        <h2>What's On:</h2>
+        <div id="event-list">
+          <ul id="events">
+            <li class="event-details red">
+              <table>
+                <tr><th><h4>Mindfulness @ Lunchtime</h4></th></tr>
+                <tr><td>Every Tuesday, 12:15</td></tr>
+                <tr><td>St Mark's Church</td></tr>
+              <tr><td>For more information contact Jon Bagust
+              f: mindfulnessatlunchtime</td></tr>
+              </tr></table>
+            </li>
+            <li class="event-details orange">
+              <table>
+                <tr><th><h4>Edinburgh Interfaith Association Community Meal
+</h4></th></tr>
+                <tr><td>Monday 1 April, 6.30pm</td></tr>
+                <tr><td>St Mark's Church</td></tr>
+              <tr><td>For more information contact Margery MacKay
+                e: stmarkssecretary@btinternet</td></tr>
+              </tr></table>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div id="add-events">
+        <form id="add-events-form">
+          <h3>Enter Events Here:</h3>
+          <fieldset>
+          <legend>Enter Event Details:</legend>
+          <div class="form-item">
+            <label for="title" class="">Event Name</label>
+            <input type="text" id="title" required/>
+
+            <label for="date" class="">Date</label>
+            <input type="date" id="date" required/>
+
+            <label for="time" class="">Time</label>
+            <input type="time" id="time" required/>
+
+            <label for="title" class="">Location</label>
+            <input type="text" id="location" required/>
+
+            <label for="description" class="">Description</label>
+            <input type="text" id="description" required/>
+
+            <label for="contact" class="">Contact</label>
+            <input type="text" id="contact" required/>
+          </div>
+
+          </fieldset>
+          <input type="submit" value="Save"/>
+          <input type="button" id="delete" value="Delete"/>
+
+        </form>
+      </div>
+
+
+    </main>
+    <footer>
+    </footer>
+  </body>
+</html>

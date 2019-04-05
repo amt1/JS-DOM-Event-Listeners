@@ -1,0 +1,89 @@
+div#hero {
+
+}
+
+main {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-wrap: wrap-reverse;
+}
+
+div#add-events {
+  display: inline-block;
+  width: 1fr;
+  min-width: 300px;
+  border: 1px solid lightgray;
+  background-color: #efefef;
+  /* border-radius: 10px; */
+  padding: 1em;
+}
+
+div#display-events {
+  display: inline-block;
+  align-self: flex-start;
+
+  justify: left;
+  display: flex;
+  align-items: flex-start;
+  /* align-content: space-around; */
+  flex-wrap: wrap;
+  background-color: white;
+  margin: 2em;
+  width: 3fr;
+  min-width: 750px;
+  border: 5px double midnightblue;
+  border-radius: 20px;
+  padding: 2em;
+}
+
+fieldset {
+  margin-bottom: 1em;
+  padding: 1em;
+}
+ label {
+   display: block;
+   margin-top: 1em;
+   margin-bottom: 0.2em;
+ }
+
+ input {
+   width: inherit;
+ }
+
+ul#events {
+  list-style: none;
+}
+
+li.event-details {
+  display: inline-block;
+  width: 250px;
+  padding: 1em;
+  text-align: center;
+  border-radius: 5px;
+  margin: 1em;
+}
+
+li.red {
+  border: 2px solid red;
+}
+
+li.orange {
+  border: 2px solid orange;
+
+}
+li.yellow {
+  border: 1px solid yellow;
+}
+li.green {
+  border: 1px solid green;
+}
+li.blue {
+  border: 1px solid blue;
+}
+li.indigo {
+  border: 1px solid indigo;
+}
+li.violet {
+  border: 1px solid violet;
+}
