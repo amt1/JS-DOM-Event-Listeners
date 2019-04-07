@@ -68,12 +68,21 @@ fieldset {
   margin-bottom: 1em;
   padding: 1em;
 }
+
+legend {
+  clear: both;
+  margin-top: 1em;
+}
  label {
    display: block;
    margin-top: 1em;
    margin-bottom: 0.2em;
  }
-
+select {
+  width: 200px;
+  height: 1.5em;
+  line-height: 1.5em;
+}
  input {
    width: inherit;
  }

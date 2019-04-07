@@ -47,7 +47,7 @@
           <legend>Enter Event Details:</legend>
           <div class="form-item">
             <label for="title" class="">Event Name</label>
-            <input type="text" name="title" id="title" required/>
+            <input type="text" name="title" id="title"  size='50' required/>
 <!-- I actually think these time, date and email fields are too specific
 for this example but I wanted to include them to have a reminder
 of them and try them out -->
@@ -60,17 +60,36 @@ that would only show the time input field if No is selected -->
             <label for="time" class="">Time</label>
             <input type="time" name="time" id="time" required/>
 <!-- should really be start and end times -->
-            <label for="title" class="">Location</label>
-            <input type="text" name="location" id="location" required/>
-
+            <fieldset id="location">
+<!-- this id in the fieldset is what the javascript event listener uses -->
+              <legend>Choose Location:</legend>
+              <label class="radio">The Church
+                <input type="radio" name="location" value="St Mark's Church" checked />
+              </label>
+                <label class="radio">The Upper Hall
+                <input type="radio" name="location" value="The Upper Hall" />
+              </label>
+              <label class="radio">The Lower Hall
+                <input type="radio" name="location" value="The Lower Hall" />
+              </label>
+              <label class="radio" disabled>The Chanter (disabled)
+                <input type="radio" name="location" value="The Chanter" disabled>
+              </label>
+            </fieldset>
             <label for="description" class="">Description</label>
-            <input type="text" name="description"id="description" />
-
+            <textarea name="description" id="description" form="add-event-form" rows="6" cols="50" value="">
+            </textarea>
             <label for="contact" class="">Contact Name</label>
-            <input type="text" name="contact" id="contact" required/>
-
+            <select id="contact" width='50'>
+              <option disabled selected>Choose one:</option>
+              <option value="Mary">Mary</option>
+              <option value="Margery">Margery</option>
+              <option value="Peter">Peter</option>
+              <option value="Jane">Jane</option>
+              <option value="Jon">Jon</option>
+            </select>
             <label for="email" class="">Contact Email</label>
-            <input type="email"  name= "email" id="email" />
+            <input type="email"  name= "email" id="email" size='50'/>
           </div>
 
           </fieldset>
