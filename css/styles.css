@@ -31,7 +31,7 @@ main {
   display: flex;
   justify-content: space-around;
   flex-direction: row;
-  align-items: flex-start;
+  align-items: flex-end;
   flex-wrap: wrap-reverse;
 }
 
@@ -58,7 +58,7 @@ div#display-events {
   background-color: white;
   margin: 2em;
   width: 3fr;
-  min-width: 750px;
+  /* min-width: 750px; */
   border: 5px double midnightblue;
   border-radius: 20px;
   padding: 2em;

@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <script src="models/list-app.js"></script>
+    <script src="models/list_app.js"></script>
     <link rel="stylesheet" type="text/css" media="screen" href="css/styles.css" />
 
     <title>Upcoming Events</title>
@@ -47,26 +47,34 @@
           <legend>Enter Event Details:</legend>
           <div class="form-item">
             <label for="title" class="">Event Name</label>
-            <input type="text" id="title" required/>
-
+            <input type="text" name="title" id="title" required/>
+<!-- I actually think these time, date and email fields are too specific
+for this example but I wanted to include them to have a reminder
+of them and try them out -->
             <label for="date" class="">Date</label>
-            <input type="date" id="date" required/>
+            <input type="date" name="date" id="date" required/>
+
+<!-- ok if I have time it would be good to add an 'All Day' option
+that would only show the time input field if No is selected -->
 
             <label for="time" class="">Time</label>
-            <input type="time" id="time" required/>
-
+            <input type="time" name="time" id="time" required/>
+<!-- should really be start and end times -->
             <label for="title" class="">Location</label>
-            <input type="text" id="location" required/>
+            <input type="text" name="location" id="location" required/>
 
             <label for="description" class="">Description</label>
-            <input type="text" id="description" required/>
+            <input type="text" name="description"id="description" />
 
-            <label for="contact" class="">Contact</label>
-            <input type="text" id="contact" required/>
+            <label for="contact" class="">Contact Name</label>
+            <input type="text" name="contact" id="contact" required/>
+
+            <label for="email" class="">Contact Email</label>
+            <input type="email"  name= "email" id="email" />
           </div>
 
           </fieldset>
-          <input type="submit" value="Save"/>
+          <input type="submit" id= "save" value="Save"/>
           <input type="button" id="delete" value="Delete"/>
 
         </form>
