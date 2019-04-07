@@ -56,10 +56,16 @@ of them and try them out -->
 
 <!-- ok if I have time it would be good to add an 'All Day' option
 that would only show the time input field if No is selected -->
+            <label for="allday">All Day Event? <input type="checkbox" name="allday" id="allday" value="All Day" checked></label>
 
-            <label for="time" class="">Time</label>
-            <input type="time" name="time" id="time" required/>
+            <div id="settimes" class="hidesettimes">
+            <label for="start-time" class="">Start Time</label>
+            <input type="time" name="start-time" id="start-time"/>
+            <label for="end-time" class="">End Time</label>
+            <input type="time" name="end-time" id="end-time"/>
+          </div>
 <!-- should really be start and end times -->
+<br />
             <fieldset id="location">
 <!-- this id in the fieldset is what the javascript event listener uses -->
               <legend>Choose Location:</legend>

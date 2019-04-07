@@ -87,6 +87,14 @@ select {
    width: inherit;
  }
 
+.hidesettimes {
+  display: none;
+}
+
+.showsettimes {
+  display: block;
+}
+
 ul#events {
   list-style: none;
 }

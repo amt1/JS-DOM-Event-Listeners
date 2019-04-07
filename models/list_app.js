@@ -21,6 +21,9 @@ clickDeleteButton.addEventListener('click',handleDeleteButtonClick);
 
 let titleText='';
 let eventDate='';
+let eventAllDay = '';
+let eventStartTime='';
+let eventEndTime='';
 let eventTime='';
 let eventLocation = '';
 let eventDescription = '';
@@ -43,13 +46,35 @@ const handleDateInput = function(event){
 const eventInput = document.querySelector('#date');
 eventInput.addEventListener('input', handleDateInput);
 
+const handleAllDayInput = function(event){
+    // eventAllDay = event.target.value;
+    const setTimes = document.querySelector('#settimes');
+
+    if (event.target.checked){
+      eventAllDay=true;
+      setTimes.className="hidesettimes";
+    } else {
+      eventAllDay = false;
+      setTimes.className="showsettimes";
+
+    }
+    console.log(eventAllDay);
+
+};
+
+const allDayInput = document.querySelector('#allday');
+allDayInput.addEventListener('change', handleAllDayInput);
+
 const handleTimeInput = function(event){
     eventTime = event.target.value;
     console.log(eventTime);
+    return eventTime;
 };
 
-const timeInput = document.querySelector('#time');
-timeInput.addEventListener('input', handleTimeInput);
+const startTimeInput = document.querySelector('#start-time');
+eventStartTime=startTimeInput.addEventListener('input', handleTimeInput);
+const endTimeInput = document.querySelector('#end-time');
+eventEndTime=endTimeInput.addEventListener('input', handleTimeInput);
 
 const handleLocationInput = function(event){
     eventLocation = event.target.value;
@@ -57,7 +82,7 @@ const handleLocationInput = function(event){
 };
 
 const locationInput = document.querySelector('#location');
-locationInput.addEventListener('change', handleTimeInput);
+locationInput.addEventListener('change', handleLocationInput);
 
 const handleDescriptionInput = function(event){
     descriptionText = event.target.value;
