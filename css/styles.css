@@ -1,10 +1,36 @@
-div#hero {
-
+body {
+  margin: 0;
+  padding: 0;
 }
+
+div#hero {
+    background-color: midnightblue;
+    color: oldlace;
+    text-align:center;
+    margin-top: 0;
+    margin-bottom: 20px;
+    padding: 0;
+    background-image: url("../photos/pride-fb-cover.jpg");
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    height: 450px;
+  }
+
+#hero h1 {
+  font-size: 4em;
+  font-family: Tahoma, verdana, sans-serif;
+  font-weight: lighter;
+  margin: 0;
+  padding-top: 4.5em;
+  }
+
+
 
 main {
   display: flex;
   justify-content: space-around;
+  flex-direction: row;
   align-items: flex-start;
   flex-wrap: wrap-reverse;
 }
@@ -15,13 +41,14 @@ div#add-events {
   min-width: 300px;
   border: 1px solid lightgray;
   background-color: #efefef;
-  /* border-radius: 10px; */
   padding: 1em;
 }
 
 div#display-events {
-  display: inline-block;
-  align-self: flex-start;
+  /* aaaaarrrgh flexbox!!! */
+  /* display: inline-block; */
+  flex-direction: row;
+  align-self: flex-start stretch;
 
   justify: left;
   display: flex;
@@ -57,6 +84,7 @@ ul#events {
 
 li.event-details {
   display: inline-block;
+  align-self: stretch;
   width: 250px;
   padding: 1em;
   text-align: center;
