@@ -141,7 +141,7 @@ const addEvent = function(){
   const HTMLString5 = `<tr><td>${eventLocation} </td></tr>`;
   const HTMLString6 = `<tr><td>${eventDescription}</td></tr>`;
   const HTMLString7 = `<tr><td>For more information, contact ${eventContact}<br />`;
-  const HTMLString8 = `${eventEmail}</td></tr>`;
+  const HTMLString8 = `${eventEmail}</td></tr></table>`;
 
   newListItem.innerHTML = HTMLString1 + HTMLString2 + HTMLString5 + HTMLString6 + HTMLString7 + HTMLString8;
   newListItem.className = "event-details";
