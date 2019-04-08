@@ -20,15 +20,16 @@ clickDeleteButton.addEventListener('click',handleDeleteButtonClick);
 // get the new elements from the form:
 
 let titleText='';
-let eventDate='';
-let eventAllDay = '';
-let eventStartTime='';
-let eventEndTime='';
-let eventTime='';
+let eventDate = new Date();
+let eventAllDay = true;
+let eventStartTime= new Date();
+let eventEndTime= new Date();
+let eventTime= new Date();
 let eventLocation = '';
 let eventDescription = '';
 let eventContact = '';
 let eventEmail = '';
+let counter=2;
 
 const handleTitleInput = function(event){
     titleText = event.target.value;
@@ -40,7 +41,7 @@ titleInput.addEventListener('input', handleTitleInput);
 
 const handleDateInput = function(event){
     eventDate = event.target.value;
-    console.log(eventDate);
+    // console.log(eventDate.prototype.toDateString());
 };
 
 const eventInput = document.querySelector('#date');
@@ -65,17 +66,28 @@ const handleAllDayInput = function(event){
 const allDayInput = document.querySelector('#allday');
 allDayInput.addEventListener('change', handleAllDayInput);
 
-const handleTimeInput = function(event){
-    eventTime = event.target.value;
-    console.log(eventTime);
-    return eventTime;
+// ok I thought this would be better but it didn't work: times were undefined
+// const handleTimeInput = function(event){
+//     eventTime = event.target.value;
+//     console.log(eventTime);
+//     return eventTime;
+// };
+
+const handleStartTimeInput = function(event){
+    eventStartTime = event.target.value;
+    console.log(eventStartTime);
+};
+const handleEndTimeInput = function(event){
+    eventEndTime = event.target.value;
+    console.log(eventEndTime);
 };
 
 const startTimeInput = document.querySelector('#start-time');
-eventStartTime=startTimeInput.addEventListener('input', handleTimeInput);
+startTimeInput.addEventListener('input', handleStartTimeInput);
 const endTimeInput = document.querySelector('#end-time');
-eventEndTime=endTimeInput.addEventListener('input', handleTimeInput);
-
+endTimeInput.addEventListener('input', handleEndTimeInput);
+console.log('got start',eventStartTime);
+console.log('got end',eventEndTime);
 const handleLocationInput = function(event){
     eventLocation = event.target.value;
     console.log(eventLocation);
@@ -101,8 +113,7 @@ const contactInput = document.querySelector('#contact');
 contactInput.addEventListener('change', handleContactInput);
 
 const handleEmailInput = function(event){
-    emailText = event.target.value;
-    console.log(emailText);
+    eventEmail = String(event.target.value);
 };
 
 const emailInput = document.querySelector('#email');
@@ -112,7 +123,30 @@ emailInput.addEventListener('input', handleEmailInput);
 const addEvent = function(){
   const newListItem = document.createElement('li');
   const eventsList = document.querySelector('#events');
-  newListItem.innerHTML = `<p>${titleText}</p><p>${authorText}</p><p>${categorySelected}</p>`;
+  const dateString=new Date(eventDate).toDateString();
+  // const startTimeString = new Date(eventStartTime).toTimeString();
+  // const endTimeString = new Date(eventEndTime).toTimeString();
+  const startTimeString = String(eventStartTime);
+  const endTimeString = String(eventEndTime);
+
+  let HTMLString3 = dateString;
+  let HTMLString4 ='';
+  if (eventAllDay === true) {
+    HTMLString4 = `, All Day`;
+  } else {
+    HTMLString4 = `, ${startTimeString} - ${endTimeString}`;
+  };
+  const HTMLString1=`<table><tr><th><h4>${titleText}</h4></th></tr>`;
+  const HTMLString2=`<tr><td>` + HTMLString3 + HTMLString4 + ` </td></tr>`;
+  const HTMLString5 = `<tr><td>${eventLocation} </td></tr>`;
+  const HTMLString6 = `<tr><td>${eventDescription}</td></tr>`;
+  const HTMLString7 = `<tr><td>For more information, contact ${eventContact}<br />`;
+  const HTMLString8 = `${eventEmail}</td></tr>`;
+
+  newListItem.innerHTML = HTMLString1 + HTMLString2 + HTMLString5 + HTMLString6 + HTMLString7 + HTMLString8;
+  newListItem.className = "event-details";
+  let colourString=` colour-` + String(counter++ % 7);
+  newListItem.className += colourString;
   eventsList.appendChild(newListItem);
 
 };

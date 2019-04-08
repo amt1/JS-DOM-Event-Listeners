@@ -109,26 +109,26 @@ li.event-details {
   margin: 1em;
 }
 
-li.red {
+li.colour-0 {
   border: 2px solid red;
 }
 
-li.orange {
+li.colour-1 {
   border: 2px solid orange;
 
 }
-li.yellow {
-  border: 1px solid yellow;
+li.colour-2 {
+  border: 2px solid yellow;
 }
-li.green {
-  border: 1px solid green;
+li.colour-3 {
+  border: 2px solid green;
 }
-li.blue {
-  border: 1px solid blue;
+li.colour-4 {
+  border: 2px solid blue;
 }
-li.indigo {
-  border: 1px solid indigo;
+li.colour-5 {
+  border: 2px solid indigo;
 }
-li.violet {
-  border: 1px solid violet;
+li.colour-6 {
+  border: 2px solid violet;
 }
