@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <script src="models/list_app.js"></script>
     <link rel="stylesheet" type="text/css" media="screen" href="css/styles.css" />
+    <link rel="stylesheet" type="text/css" media="print" href="css/print-styles.css" />
 
     <title>Upcoming Events</title>
   </head>
@@ -32,7 +33,7 @@
 </h4></th></tr>
                 <tr><td>Monday 1 April, 6.30pm</td></tr>
                 <tr><td>St Mark's Church</td></tr>
-              <tr><td>For more information contact Margery 
+              <tr><td>For more information contact Margery
                 e: stmarkssecretary@fakeemail.com</td></tr>
               </tr></table>
             </li>
@@ -45,17 +46,20 @@
           <h3>Enter Events Here:</h3>
           <fieldset>
           <legend>Enter Event Details:</legend>
-          <div class="form-item">
+          <div class="form-element">
             <label for="title" class="">Event Name</label>
             <input type="text" name="title" id="title"  size='50' required/>
+          </div>
 <!-- I actually think these time, date and email fields are too specific
 for this example but I wanted to include them to have a reminder
 of them and try them out -->
+          <div class="form-element">
             <label for="date" class="">Date</label>
             <input type="date" name="date" id="date" required/>
 
-<!-- ok if I have time it would be good to add an 'All Day' option
+<!-- added  an 'All Day' option
 that would only show the time input field if No is selected -->
+
             <label for="allday">All Day Event? <input type="checkbox" name="allday" id="allday" value="All Day" checked></label>
 
             <div id="settimes" class="hidesettimes">
@@ -64,8 +68,8 @@ that would only show the time input field if No is selected -->
             <label for="end-time" class="">End Time</label>
             <input type="time" name="end-time" id="end-time"/>
           </div>
-<!-- should really be start and end times -->
-<br />
+        <!-- </div>
+          <div class="form-element"> -->
             <fieldset id="location">
 <!-- this id in the fieldset is what the javascript event listener uses -->
               <legend>Choose Location:</legend>
@@ -82,9 +86,15 @@ that would only show the time input field if No is selected -->
                 <input type="radio" name="location" value="The Chanter" disabled>
               </label>
             </fieldset>
+          </div>
+          <div class="form-element">
+
             <label for="description" class="">Description</label>
             <textarea name="description" id="description" form="add-event-form" rows="6" cols="50" value="">
             </textarea>
+          </div>
+          <div class="form-element">
+
             <label for="contact" class="">Contact Name</label>
             <select id="contact" width='50'>
               <option disabled selected>Choose one:</option>
@@ -94,6 +104,9 @@ that would only show the time input field if No is selected -->
               <option value="Jane">Jane</option>
               <option value="Jon">Jon</option>
             </select>
+          <!-- </div>
+          <div class="form-element"> -->
+
             <label for="email" class="">Contact Email</label>
             <input type="email"  name= "email" id="email" size='50'/>
           </div>
