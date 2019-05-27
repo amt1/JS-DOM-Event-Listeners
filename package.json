@@ -2,9 +2,9 @@
   "name": "js-dom-homework",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "index.html",
   "scripts": {
-    "test": "mocha specs"
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
