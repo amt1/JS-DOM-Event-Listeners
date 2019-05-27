@@ -139,8 +139,13 @@ const addEvent = function(){
   const HTMLString1=`<table><tr><th><h4>${titleText}</h4></th></tr>`;
   const HTMLString2=`<tr><td>` + HTMLString3 + HTMLString4 + ` </td></tr>`;
   const HTMLString5 = `<tr><td>${eventLocation} </td></tr>`;
-  const HTMLString6 = `<tr><td>${eventDescription}</td></tr>`;
-  const HTMLString7 = `<tr><td>For more information, contact ${eventContact}<br />`;
+  // const HTMLString6 = `<tr><td>${eventDescription}</td></tr>`;
+  const HTMLString6 = `<tr><td>${descriptionText}</td></tr>`;
+
+  let HTMLString7 = `<tr><td>For more information, contact ${eventContact}<br />`;
+  if (eventContact ==='' && eventEmail ==='') {
+    HTMLString7=`<tr><td>`;
+  }
   const HTMLString8 = `${eventEmail}</td></tr></table>`;
 
   newListItem.innerHTML = HTMLString1 + HTMLString2 + HTMLString5 + HTMLString6 + HTMLString7 + HTMLString8;
@@ -157,6 +162,9 @@ const handleFormSubmit = function(event){
   // as this is obviously a reserved word!
   // so nothing can be called 'event' but I have variations on that
   addEvent();
+  eventDescription = '';
+  eventContact = '';
+  eventEmail = '';
   form.reset();
 };
 
